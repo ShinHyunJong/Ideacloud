@@ -1,0 +1,107 @@
+hr {
+    max-width: 100px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    height: 2px;
+    margin: 15px auto;
+}
+hr.left {
+    margin: 15px auto 15px 0;
+}
+hr.right {
+    margin: 15px 0 15px auto;
+}
+hr.colored {
+    border-color: rgb(95, 159, 204);
+}
+@media (min-width: 768px) {
+    hr {
+        max-width: 200px;
+        margin: 20px auto;
+    }
+    hr.left {
+        margin: 20px auto 20px 0;
+    }
+    hr.right {
+        margin: 20px 0 20px auto;
+    }
+}
+.text-muted {
+    color: #777777;
+}
+.text-primary {
+   color:rgb(95, 159, 204);
+}
+.btn-outline {
+    color: white;
+    border-color: white;
+    border: 1px solid;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+    color: white;
+    background-color: #fdcc52;
+
+}
+.btn {
+    font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 300px;
+}
+.btn-xl {
+    padding: 15px 45px;
+    font-size: 11px;
+}.btn-outline {
+     color: white;
+     border-color: white;
+     border: 1px solid;
+ }
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+    color: rgb(95, 159, 204);
+    background-color: white;
+
+}
+.btn {
+    font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 300px;
+}
+.btn-xl {
+    padding: 15px 45px;
+    font-size: 11px;
+}
+header {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: auto;
+    overflow-y: hidden;
+    background-color: rgb(95, 159, 204);
+    color: white;
+    font-family: "Open Sans", cursive, sans-serif;
+    font-size: 250%;
+
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: #5f9fcc;
+}
+#about
+{
+    padding-top: 5%;
+    padding-bottom: 8%;
+}
+.logo{
+    padding-bottom: 10%;
+}
+
+
+
