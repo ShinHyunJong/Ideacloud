@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::resource('color','ColorController');
+
+Route::resource('idea','IdeaController');

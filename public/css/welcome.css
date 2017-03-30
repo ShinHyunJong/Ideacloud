@@ -102,6 +102,13 @@ header {
 .logo{
     padding-bottom: 10%;
 }
+.panel-default>.panel-heading {
+    color: white;
+    background-color: #5f9fcc;
+    border-color: #d3e0e9;
+    font-family: "Open Sans", cursive, sans-serif;
+    font-size: 20px;
+}
 
 
 

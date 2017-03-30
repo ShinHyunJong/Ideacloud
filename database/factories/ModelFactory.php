@@ -31,3 +31,14 @@ $factory->define(App\Color::class, function (Faker\Generator $faker) {
         'desc' => $faker->name,
     ];
 });
+$factory->define(App\Idea::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+        'name' => $faker->name,
+        'text' => $faker->text,
+        'kind' => $faker->colorName,
+
+
+    ];
+});
