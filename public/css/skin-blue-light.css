@@ -46,6 +46,7 @@
   background-color: #5f9fcc;
   color: #ffffff;
   border-bottom: 0 solid transparent;
+  font-family: "Open Sans", cursive, sans-serif;
 }
 .skin-blue-light .main-header .logo:hover {
   background-color: #3b8ab8;

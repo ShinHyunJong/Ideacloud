@@ -40,7 +40,7 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>idea</b></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>idea</b>cloud</span>
+            <p class="logo-lg"><b>idea</b>cloud</p>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -267,10 +267,10 @@
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="/img/idea.png" class="img-circle" alt="User Image">
 
                                 <p>
-                                    Alexander Pierce - Web Developer
+                                    {{ Auth::user()->name }}
                                     <small>Member since Nov. 2012</small>
                                 </p>
                             </li>
@@ -322,20 +322,10 @@
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
-            <!-- search form -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search...">
-                    <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-                </div>
-            </form>
-            <!-- /.search form -->
+
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
-                <li class="header">MAIN NAVIGATION</li>
+                <li class="header">Services</li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-2x fa-lightbulb-o"></i> <span>Idea</span>
@@ -372,7 +362,21 @@
             </span>
                     </a>
                 </li>
+                <li class="header">Add Your Ideas!</li>
             </ul>
+
+            <form action="/idea" method="POST" style="margin:10px 10px;">
+                {{csrf_field()}}
+                <input class="form-control" type="text" name="name" placeholder="title">
+                <br>
+                <input class="form-control" type="text" name="kind" placeholder="category">
+                <br>
+                <div class="form-group">
+
+                    <textarea class="form-control" name="text" rows="5" placeholder="ideas!"></textarea>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary btn-flat"><i class="fa fa-plus"></i></button>
+            </form>
         </section>
         <!-- /.sidebar -->
     </aside>
@@ -383,46 +387,39 @@
         </section>
         <section class="content">
             <div class="container">
-                <div class="col-md-5">
-                    @foreach($ideas->sortBy('desc') as $idea)
 
-                        <div class="box box-primary">
-                            <div class="box-header with-border">
-                                <div class="box-title">
-                                    <h3>{{$idea->kind}}</h3>
+
+                    <div class="row">
+                        @foreach($ideas as $idea)
+                        <div class="col-md-12">
+
+                            <div class="col-md-5">
+
+
+                                <div class="box box-primary">
+                                    <div class="box-header with-border">
+                                        <div class="box-title">
+                                            <h3>{{$idea->kind}}</h3>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <p>{{$idea->text}}</p>
+
+                                    </div>
+                                    <div class="box-footer">
+                                        <p><b>by</b> {{$idea->name}}</p>
+                                    </div>
+
+
                                 </div>
-                            </div>
-                            <div class="box-body">
-                                <p>{{$idea->text}}</p>
 
                             </div>
-                            <div class="box-footer">
-                                <p><b>by</b> {{$idea->name}}</p>
-                            </div>
-
 
                         </div>
-                    @endforeach
-                </div>
-                <div class="col-md-3">
-                    <div class="box box-default">
-                        <div class="box-header with-border">
-                            <div class="box-title">
-                                <h3>Manage</h3>
-                            </div>
-                        </div>
-                        <div class="box-body">
-                            <form action="/idea" method="POST">
-                                {{csrf_field()}}
-                                <input type="text" name="name" placeholder="name"/>
-                                <input type="text" name="text" placeholder="text"/>
-                                <input type="text" name="kind" placeholder="kind"/>
-                                <input type="submit">
-                            </form>
-                        </div>
+                        @endforeach
                     </div>
 
-                </div>
+
             </div>
         </section>
         <aside class="control-sidebar control-sidebar-dark">
