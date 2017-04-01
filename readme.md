@@ -1,4 +1,4 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+
 
 
 
@@ -12,10 +12,10 @@ Ideacloud is storage service which is able to keep or share your ideas.
 ## Framework
 - Ideacloud is built with PHP Framework Laravel 5.3
 
-##DATABASE
+## DATABASE
 - MySQL
 
-##Libraries
+## Libraries
 - CSS Framework::Bootstrap
 - jQuery
 - Datatables.js
