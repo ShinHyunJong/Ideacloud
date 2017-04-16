@@ -3,30 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Idea;
+use App\Share;
 
-use Auth;
-class IdeaController extends Controller
+class ShareController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
     public function index()
     {
         //
-        $ideas = Idea::where('user_id',Auth::user()->id)->get();
-
-        $sortedIdea = $ideas->sortByDesc('id');
-        return view('ideas.index',compact('sortedIdea'));
-//
-
+        $shares = Share::all();
+        $sortedShares = $shares->sortByDesc('id');
+        return view('shares.index',compact('sortedShares'));
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -35,8 +27,6 @@ class IdeaController extends Controller
      */
     public function create()
     {
-
-        return view('ideas.index');
         //
     }
 
@@ -48,9 +38,6 @@ class IdeaController extends Controller
      */
     public function store(Request $request)
     {
-        $idea = new Idea($request->all());
-        $idea->save();
-        return redirect('/idea');
         //
     }
 

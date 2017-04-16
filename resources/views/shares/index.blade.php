@@ -361,7 +361,7 @@
                 <li class="header">Add Your Ideas!</li>
             </ul>
 
-            <form action="/idea" method="POST" style="margin:10px 10px;">
+            <form action="/share" method="POST" style="margin:10px 10px;">
                 {{csrf_field()}}
                 <input class="form-control" name="user_id" type="text" value="{{Auth::user()->id}}"
                        style="display: none;">
@@ -381,38 +381,9 @@
 
     <div class="content-wrapper">
         <section class="content-header">
-            <h1>Keeping Ideas</h1>
+            <h1>Sharing Ideas</h1>
         </section>
         <section class="content">
-
-
-
-                <div class="row">
-
-
-                            <div class="col-md-6 col-md-offset-3">
-                                @foreach($sortedIdea as $idea)
-                                <div class="box box-primary">
-                                    <div class="box-header with-border">
-                                        <div class="box-title">
-                                            <h3>{{$idea->name}}</h3>
-                                            <span>{{$idea->kind}}</span>
-                                        </div>
-                                    </div>
-                                    <div class="box-body">
-                                        <p>{{$idea->text}}</p>
-                                    </div>
-                                    <div class="box-footer">
-                                        <p><b>by</b> {{$idea->user->name}}</p>
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-
-
-                </div>
-
-
 
         </section>
         <aside class="control-sidebar control-sidebar-dark">

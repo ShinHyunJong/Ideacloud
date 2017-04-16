@@ -57,7 +57,7 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                             <li><a class="page-scroll" href="#about">About</a></li>
-                            <li><a class="page-scroll" href="#contact">Contact</a></li>
+
 
                         @else
                             <li class="dropdown">
@@ -81,7 +81,7 @@
                                 </ul>
                             </li>
                             <li><a class="page-scroll" href="#about">About</a></li>
-                            <li><a class="page-scroll" href="#contact">Contact</a></li>
+
                         @endif
                     </ul>
                 </div>

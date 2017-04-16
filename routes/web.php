@@ -18,7 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/idea/public', 'IdeaController@publicIndex');
 
 Route::resource('color','ColorController');
 
 Route::resource('idea','IdeaController');
+Route::resource('share','ShareController');

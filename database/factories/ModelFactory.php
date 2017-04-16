@@ -16,8 +16,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
+        'name' => 'Shin Hyun Jong',
+        'email' => 'admin@gmail.com',
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
     ];
@@ -32,13 +32,20 @@ $factory->define(App\Color::class, function (Faker\Generator $faker) {
     ];
 });
 $factory->define(App\Idea::class, function (Faker\Generator $faker) {
-    static $password;
-
     return [
+        'user_id' => 1,
         'name' => $faker->name,
         'text' => $faker->text,
         'kind' => $faker->colorName,
-
-
     ];
 });
+$factory->define(App\Share::class, function (Faker\Generator $faker) {
+    static $password;
+    return [
+        'name' => $faker->name,
+        'kind' => $faker->colorName,
+        'text' => $faker->text,
+    ];
+});
+
+
