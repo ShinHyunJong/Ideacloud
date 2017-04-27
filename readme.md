@@ -26,4 +26,24 @@ Ideacloud is storage service which is able to keep or share your ideas.
 
 Ideacloud is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
-![ex_screenshot](./img/main.png) 
+## About Ideacloud
+![mainpage](./img/main.png)
+This is Main Page when you accessed to my App.
+
+![registerpage](./img/register.png)
+This is Register page that you can make your own ID&PW.
+
+![loginpage](./img/login.png)
+This is Login Page. Type your ID & PW which you made it on register page.
+
+![mainpage](./img/mainlogin.png)
+This is your own main page when you accessed on Ideacloud. You can see your name, online state, and Tabs which you can use.
+
+![mainpage](./img/add.png)
+You can add your Ideas through this tab.
+
+
+
+
+
+
