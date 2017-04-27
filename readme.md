@@ -25,3 +25,5 @@ Ideacloud is storage service which is able to keep or share your ideas.
 ## License
 
 Ideacloud is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+(./img/main.png) 
