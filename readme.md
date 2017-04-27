@@ -42,6 +42,22 @@ This is your own main page when you accessed on Ideacloud. You can see your name
 ![mainpage](./img/add.png)
 You can add your Ideas through this tab.
 
+### Functions On Ideacloud
+
+* Login
+* Register
+* Find your PW via Email when you forgot.
+* Keep your own ideas(Other people cannot see your ideas.)
+* Share your ideas(Other people can see your ideas.)
+* Edit your ideas.
+* Delete your ideas.
+* To-Do Apps.
+* Your personnel Calendar.
+* Security (your pw is bcrypted. -> SuperSafe!)
+
+
+
+
 
 
 
