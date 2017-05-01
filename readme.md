@@ -20,6 +20,8 @@ Ideacloud is storage service which is able to keep or share your ideas.
 - jQuery
 - Datatables.js
 - AdminLTE.css (Admin css theme)
+- fullcalendar.js
+- morris chart.js
 
 
 ## License
