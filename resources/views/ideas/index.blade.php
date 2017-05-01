@@ -15,6 +15,8 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/AdminLTE.css') }}" rel="stylesheet">
     <link href="{{ asset('css/skin-blue-light.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/morris.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -390,7 +392,7 @@
                 <div class="row">
 
 
-                            <div class="col-md-6 col-md-offset-3">
+                            <div class="col-md-5">
                                 @foreach($sortedIdea as $idea)
                                 <div class="box box-primary">
                                     <div class="box-header with-border">
@@ -408,6 +410,50 @@
                                 </div>
                                 @endforeach
                             </div>
+                        <div class="col-md-7">
+                            <div class="box box-solid bg-light-blue-gradient">
+                                <div class="box-header">
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <button type="button" class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range">
+                                            <i class="fa fa-calendar"></i></button>
+                                        <button type="button" class="btn btn-primary btn-sm pull-right" data-widget="collapse" data-toggle="tooltip" title="Collapse" style="margin-right: 5px;">
+                                            <i class="fa fa-minus"></i></button>
+                                    </div>
+                                    <!-- /. tools -->
+
+                                    <i class="fa fa-map-marker"></i>
+
+                                    <h3 class="box-title">
+                                        Visitors
+                                    </h3>
+                                </div>
+                                <div class="box-body">
+                                    <div id="world-map" style="height: 250px; width: 100%;"></div>
+                                </div>
+                                <!-- /.box-body-->
+                                <div class="box-footer no-border">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                                            <div id="sparkline-1"></div>
+                                            <div class="knob-label">Visitors</div>
+                                        </div>
+                                        <!-- ./col -->
+                                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                                            <div id="sparkline-2"></div>
+                                            <div class="knob-label">Online</div>
+                                        </div>
+                                        <!-- ./col -->
+                                        <div class="col-xs-4 text-center">
+                                            <div id="sparkline-3"></div>
+                                            <div class="knob-label">Exists</div>
+                                        </div>
+                                        <!-- ./col -->
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                            </div>
+                        </div>
 
 
                 </div>
@@ -430,10 +476,17 @@
 <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
-<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-{{--<script src="{{ asset('js/app.js') }}"></script>--}}
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
 <script src="{{ asset('js/app1.js') }}"></script>
 <script src="{{ asset('js/jquery.slimscroll.js') }}"></script>
+<script src="{{ asset('js/morris.min.js') }}"></script>
+<script src="{{ asset('js/jquery.sparkline.js') }}"></script>
+<script src="{{ asset('js/jquery-jvectormap-1.2.2.min.js') }}"></script>
+<script src="{{ asset('js/jquery-jvectormap-world-mill-en.js') }}"></script>
+<script src="{{ asset('js/demo.js') }}"></script>
+<script src="{{ asset('js/dashboard.js') }}"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
