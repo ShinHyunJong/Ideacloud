@@ -42,6 +42,11 @@ This is your own main page when you accessed on Ideacloud. You can see your name
 ![mainpage](./img/add.png)
 You can add your Ideas through this tab.
 
+![mainpage](./img/calendar.png)
+You can see your Calendar through this tab.
+
+
+
 ### Functions On Ideacloud
 
 * Login
