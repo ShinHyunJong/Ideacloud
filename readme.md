@@ -61,6 +61,9 @@ You can see your Calendar through this tab.
 * To-Do Apps.
 * Your personnel Calendar.
 * Security (your pw is bcrypted. -> SuperSafe!)
+* full caldendar.js
+* worldmap
+
 
 
 
